@@ -2,9 +2,9 @@
 require_once ("producto.php");
 class congelados extends producto
 {
-    protected $f_envase = "";
-    protected $pais_origen = "";
-    protected $temp_recomend = "";
+    protected $f_envase = " ";
+    protected $pais_origen = " ";
+    protected $temp_recomend = " ";
 
     public function __construct($caducidad_producto,$lote_producto,$f_envase,$pais_origen,$temp_recomend) {
         parent::__construct ($caducidad_producto,$lote_producto);
