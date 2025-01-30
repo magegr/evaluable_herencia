@@ -2,7 +2,7 @@
 require_once ("producto.php");
 class refrigerados extends producto
 {
-    protected $f_envase = "";
+    protected $f_envase = "" ;
     protected $pais_origen = "";
     protected $temp_recomend = "";
 
@@ -11,6 +11,18 @@ class refrigerados extends producto
         $this-> f_envase = $f_envase;
         $this-> pais_origen = $pais_origen;
         $this-> temp_recomend = $temp_recomend;
+    }
+
+    public function getFechaEnvase() {
+        return $this->f_envase;
+    }
+
+    public function getPaisOrigen() {
+        return $this->pais_origen;
+    }
+
+    public function getTempRecomend() {
+        return $this->temp_recomend;
     }
 }
 ?>

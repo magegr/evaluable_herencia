@@ -7,6 +7,10 @@ class cong_agua extends congelados
         parent::__construct ($caducidad_producto,$lote_producto,$f_envase,$pais_origen,$temp_recomend);
         $this->sal = $sal;
     }
+
+    public function getSal (){
+        return $this-> sal;
+    }
 }
 
 

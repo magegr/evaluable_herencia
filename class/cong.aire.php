@@ -14,5 +14,18 @@ class cong_aire extends congelados
         $this-> dioxido = $dioxido;
         $this-> vapor = $vapor;
     }
+    public function getNitrogeno() {
+        return $this->nitrogeno; 
+    }
+
+    public function getOxigeno() {
+        return $this->oxigeno;
+    }
+    public function getDioxido(){
+        return $this -> dioxido;
+    }
+    public function getVapor(){
+        return $this -> vapor;
+    }
 }
 ?>

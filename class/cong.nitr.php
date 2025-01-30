@@ -11,6 +11,16 @@ class cong_nitr extends congelados
         $this->tiem_expo = $tiem_expo;
         $this->nitr_segun = $nitr_segun;
     }
+    public function getMetodo() {
+        return $this->metodo; 
+    }
+
+    public function getTiempo() {
+        return $this->tiem_expo;
+    }
+    public function getNitrogeno(){
+        return $this -> nitr_segun;
+    }
 }
 
 

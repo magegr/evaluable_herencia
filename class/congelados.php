@@ -12,5 +12,16 @@ class congelados extends producto
         $this-> pais_origen = $pais_origen;
         $this-> temp_recomend = $temp_recomend;
     }
+    public function getFechaEnvase() {
+        return $this->f_envase;
+    }
+
+    public function getPaisOrigen() {
+        return $this->pais_origen;
+    }
+
+    public function getTempRecomend() {
+        return $this->temp_recomend;
+    }
 }
 ?>

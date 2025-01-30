@@ -1,16 +1,45 @@
 <?php
-/*Ejercicio 1.- Desarrollar un programa PHP que permita la gestión de una empresa agroalimentaria que trabaja con tres tipos de productos: productos frescos, productos refrigerados y productos congelados. Todos los productos llevan la siguiente información común: fecha de caducidad y número de lote.
+require_once("./class/refrigerados.php");
+require_once("./class/frescos.php");
+require_once("./class/cong.nitr.php");
+require_once("./class/cong.aire.php");
+require_once("./class/cong.agua.php");
 
-A su vez, cada tipo de producto lleva información específica:
-
-Los productos frescos deben llevar la fecha de envasado y el país de origen.
-Los productos refrigerados deben llevar el código del organismo de supervisión alimentaria, la fecha de envasado, la temperatura de mantenimiento recomendada y el país de origen.
-Los productos congelados deben llevar la fecha de envasado, el país de origen y la temperatura de mantenimiento recomendada. Además, existen tres tipos de productos congelados: congelados por aire, congelados por agua y congelados por nitrógeno.
-    Los productos congelados por aire deben llevar la información de la composición del aire con que fue congelado (% de nitrógeno, % de oxígeno, % de dióxido de carbono y % de vapor de agua).
-    Los productos congelados por agua deben llevar la información de la salinidad del agua con que se realizó la congelación en gramos de sal por litro de agua.
-    Los productos congelados por nitrógeno deben llevar la información del método de congelación empleado y del tiempo de exposición al nitrógeno expresada en segundos.*/
-$mero = new cong_nitr(31-12-2025, 15689,30-11-2024,'Francia',4,'congelado',40,600);
-echo "El producto tiene una caducidad de".$mero -> $caducidad_producto." el numero de lote es ". $mero ->$lote_producto ."la fecha de envase es ". $mero ->$f_envase. " el pais de origen es " . $mero -> $pais_origen;
-
-
+$producto1= new refrigerados("31/12/2024","3456","09/11/2024", "España", "24");
+echo "El producto 1 tiene una caducidad de ". $producto1 ->getcaducidad()."<br>";
+echo "El lote es ". $producto1 -> getNumeroLote()."<br>";
+echo "La fecha de envase es ". $producto1 -> getFechaEnvase()."<br>";
+echo "El pais de origen es ". $producto1 -> getPaisOrigen()."<br>";
+echo "El tiempo recomendado es de ". $producto1 -> getTempRecomend() ."<br><br>";
+$producto2 = new frescos("01/02/2025","3896","10/11/2024", "Rumania");
+echo "El producto 2 tiene una caducidad de ". $producto2 ->getcaducidad()."<br>";
+echo "El lote es ". $producto2 -> getNumeroLote()."<br>";
+echo "La fecha de envase es ". $producto2 -> getFechaEnvase()."<br>";
+echo "El pais de origen es ". $producto2 -> getPaisOrigen()."<br><br>";
+$producto3 = new cong_nitr ("04/11/2026","9876","22/07/2021","China","18","nitrogeno","35'","456");
+echo "El producto 3 tiene una caducidad de ". $producto3 ->getcaducidad()."<br>";
+echo "El lote es ". $producto3 -> getNumeroLote()."<br>";
+echo "La fecha de envase es ". $producto3 -> getFechaEnvase()."<br>";
+echo "El pais de origen es ". $producto3 -> getPaisOrigen()."<br>";
+echo "EL tiempo recomendado es de ". $producto3 -> getTempRecomend()."<br>";
+echo "El metodo usado es ". $producto3 -> getMetodo()."<br>";
+echo "El tiempo de exposicion es de ". $producto3 -> getTiempo()."<br>";
+echo "La cantidad de nitrogego por segundo es de ". $producto3 ->getNitrogeno()."<br><br>";
+$producto4 = new cong_aire ("04/06/2028","8945","22/07/2021","portugal","18","48","43","37","87");
+echo "El producto 4 tiene una caducidad de ". $producto4 ->getcaducidad()."<br>";
+echo "El lote es ". $producto4 -> getNumeroLote()."<br>";
+echo "La fecha de envase es ". $producto4 -> getFechaEnvase()."<br>";
+echo "El pais de origen es ". $producto4 -> getPaisOrigen()."<br>";
+echo "EL tiempo recomendado es de ". $producto4 -> getTempRecomend()."<br>";
+echo "El metodo usado es ". $producto4 -> getNitrogeno()."<br>";
+echo "El tiempo de exposicion es de ". $producto4 -> getOxigeno()."<br>";
+echo "La cantidad de nitrogego por segundo es de ". $producto4 ->getDioxido()."<br>";
+echo "El tiempo de exposicion es de ". $producto4 -> getVapor()."<br><br>";
+$producto5 = new cong_agua ("04/06/2028","8945","22/07/2021","Chile","18","48");
+echo "El producto 5 tiene una caducidad de ". $producto5 ->getcaducidad()."<br>";
+echo "El lote es ". $producto5 -> getNumeroLote()."<br>";
+echo "La fecha de envase es ". $producto5 -> getFechaEnvase()."<br>";
+echo "El pais de origen es ". $producto5 -> getPaisOrigen()."<br>";
+echo "EL tiempo recomendado es de ". $producto5 -> getTempRecomend()."<br>";
+echo "La cantidad de sal es de ". $producto5 -> getSal()."<br>";
 ?>

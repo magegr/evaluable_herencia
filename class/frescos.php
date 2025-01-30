@@ -10,5 +10,12 @@ class frescos extends producto
         $this-> f_envase = $f_envase;
         $this-> pais_origen = $pais_origen;
     }
+    public function getFechaEnvase() {
+        return $this->f_envase;
+    }
+
+    public function getPaisOrigen() {
+        return $this->pais_origen;
+    }
 }
 ?>
